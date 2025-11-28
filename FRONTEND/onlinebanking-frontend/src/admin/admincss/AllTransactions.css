@@ -1,0 +1,86 @@
+.transactions-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.transactions-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Filter section */
+.filter-section {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-section label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+
+.filter-section input {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.filter-section button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #42a5f5;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filter-section button:hover {
+  background-color: #1e88e5;
+}
+
+.filter-section .reset-btn {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.filter-section .reset-btn:hover {
+  background-color: #bdbdbd;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead tr {
+  background-color: #f2f2f2;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}

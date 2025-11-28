@@ -1,0 +1,125 @@
+.staff-container, .customer-container {
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: linear-gradient(180deg, #f3f6fd, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.staff-title, .customer-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #0f3057;
+  position: relative;
+}
+
+.staff-title::after, .customer-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #0077b6;
+  border-radius: 4px;
+  margin: 6px auto 0;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 1.5rem;
+}
+
+.filters input {
+  flex: 1;
+  min-width: 250px;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #cfd8dc;
+  outline: none;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+.filters input:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 10px rgba(0, 119, 182, 0.2);
+}
+
+.staff-table, .customer-table {
+  width: 100%;
+  max-width: 1100px;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background: #ffffff;
+}
+
+.staff-table th, .customer-table th,
+.staff-table td, .customer-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+
+.staff-table th, .customer-table th {
+  background: #0077b6;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.staff-table tbody tr:nth-child(even),
+.customer-table tbody tr:nth-child(even) {
+  background: #f4f7fb;
+}
+
+.staff-table tbody tr:hover,
+.customer-table tbody tr:hover {
+  background: #e0f0ff;
+  transition: background 0.3s;
+}
+
+.delete-btn {
+  background: #d90429;
+  color: #fff;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  background: #a3001c;
+  transform: translateY(-2px);
+}
+
+.table-error, .table-loading, .table-empty {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.table-error { background: #ff6b6b; color: #fff; }
+.table-loading { background: #219ebc; color: #fff; }
+.table-empty { background: #e0e0e0; color: #555; }
+
+@media (max-width: 768px) {
+  .filters { flex-direction: column; gap: 0.8rem; }
+  .filters input { width: 100%; }
+  .staff-table th, .staff-table td,
+  .customer-table th, .customer-table td { font-size: 0.82rem; padding: 10px 8px; }
+}
